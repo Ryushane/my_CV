@@ -8,7 +8,11 @@
 
 ## 简介
 
-该简历模板使用 XeLaTeX 编译，支持中文。
+该简历模板使用 XeLaTeX 编译，支持中文。靠这份简历找了NVIDIA、字节和几个金融央企的工作。对于一个应届毕业生来讲比较简洁好用。
+
+## 预览
+
+
 
 ## 使用方法
 
@@ -29,12 +33,10 @@ xelatex resume-en&zh_CN.tex % 编译中英文简历
 
 页脚部分使用了tikz定位，需要编译两次才能排布到正确位置。
 
+
+
 ## License
 
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)
 
 字体仅供学习交流使用，请勿用于商业用途。
-
-## 总结
-
-靠这份简历找了NVIDIA、字节和几个金融央企的工作。对于一个应届毕业生来讲比较简洁好用。
