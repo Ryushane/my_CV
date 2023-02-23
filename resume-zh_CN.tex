@@ -1,0 +1,124 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+% \usepackage{NotoSansSC_external}
+% \usepackage{NotoSerifCJKsc_external}
+% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+
+\usepackage{xcolor}
+\definecolor{CVBlue}{RGB}{23,110,191}
+\usepackage[backend=bibtex]{biblatex}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{geometry} % 调整页边距
+% \geometry{a4paper,top=1cm}
+% \geometry{a4paper,scale=1}
+\geometry{a4paper,left=1.5cm,right=1.5cm,top=0.5cm,bottom=1cm}
+
+\begin{document}
+\pagenumbering{gobble} % suppress 
+
+%%%% 利用tikz来定位照片，部分招聘单位可能需要“以貌取人”
+\begin{tikzpicture}[remember picture, overlay] 
+  \node[anchor = north east] at ($(current page.north east)+(-1.5cm,-0.8cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
+\end{tikzpicture}%
+
+%%%% 利用tikz来定位页脚栏，电子版简历使用，黑白纸质打印效果可能并不好。这里只在第一页显示，如果需要每页都有，页脚或者background中加入。
+\begin{tikzpicture}[remember picture, overlay] 
+  \node[anchor = south,fill=CVBlue,draw=none,minimum width=\paperwidth,minimum height=1.5em,align=center,font=\footnotesize,text=white] at ($(current page.south)$) {\faLinkedinSquare \ https://www.linkedin.com/in/ryushane \qquad \faGithub \ https://github.com/ryushane \qquad \faRssSquare \ https://ryushane.com};
+\end{tikzpicture}%
+
+\name{刘某某}
+
+\basicInfo{
+  \email{ryushane.net@gmail.com} \textperiodcentered\ 
+  \phone{114-514-1919810} 
+}
+
+
+
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{知春路航空职业学院}}{2020/09 -- 2023/06}
+\textit{硕士研究生} \quad \textit{电子信息工程学院} \quad  \textit{信息与通信工程}
+\begin{itemize}
+  \item \textit{专业排名}：Top 30\%
+  \item \textit{主修课程}：DSP体系结构，时频分析，检测估计与调制
+  \item \textit{研究方向}：制作未来道具
+\end{itemize}
+\datedsubsection{\textbf{昌平航空职业学院}}{2016/09 -- 2020/06}
+\textit{本科生}\ \quad \textit{电子信息工程学院} \quad \textit{电子信息工程专业}
+\begin{itemize}
+  \item \textit{专业排名}：Top 5\%
+  \item \textit{主修课程}：C语言，计算机软件基础，通信原理，信号与系统，数字信号处理，数字电路
+\end{itemize}
+
+
+
+\section{\faUsers\ 实习/项目经历}
+
+\datedsubsection{\textbf{给老黄设计芯片}}{2022/05 -- 2023/01}
+\begin{itemize}
+  \item 开发了xx工具，大大提高了团队开发效率。
+  \item 搭建了很牛逼的平台，验证xx功能，总之很吊。
+\end{itemize}
+
+\datedsubsection{\textbf{面向xx目标炼丹}}{2021/10 -- 2022/11}
+\begin{itemize}
+  \item 研究目的：我为啥要研究这个。
+  \item 研究方法：采集了xx数据，用了xx方法，实现了xx。
+  \item 研究结果：实现了xx效果，比原来提高了114倍。
+\end{itemize}
+
+\datedsubsection{\textbf{双路语音同传的无线收发系统}}{2019/07}
+\begin{itemize}
+  \item 研究目的：打比赛，混点综合量化保研。
+  \item 实现方法：大腿很牛。
+  \item 实验结果：信号很纯真，来到北邮综测，初试和综测双最高分，但是没进国赛，作为一名理工男我觉得这太酷了，很符合我对电赛的幻想。
+\end{itemize}
+
+% \clearpage % 换页
+
+\section{\faCogs\ 其他说明}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 编程能力: 
+  \begin{itemize}
+    \item 熟练使用Python / C / Matlab
+    \item Linux用的挺溜
+    \item 会写Verilog
+  \end{itemize}
+  \item 语言能力：
+  \begin{itemize}
+    \item 过了四六级
+  \end{itemize}
+\end{itemize}
+
+
+
+\section{\faInfo\ 学生工作}
+\begin{itemize}[parsep=0.5ex]
+  \item 古典部副部长，于文化祭出版社刊《冰菓》，帮助2-F班推理电影结局，在文化祭中参加猜谜、料理等比赛，在校外参与新年参拜、生雏祭等活动。
+
+\end{itemize}
+
+\section{\faFile\ 获奖情况}
+\datedline{校级三好学生}{2021/10}
+\datedline{北京市优秀毕业生}{2020/06}
+\datedline{全国大学生电子设计竞赛一等奖}{2019/09}
+
+% \section{\faStar\ 自我评价}
+% \begin{itemize}[parsep=0.5ex]
+%   \item 很喜欢双休和下午五点下班。
+% \end{itemize}
+
+% 页脚
+% \begin{tikzpicture}[remember picture, overlay] 
+%   \node[anchor = south,fill=CVBlue,draw=none,minimum width=\paperwidth,minimum height=1.5em,align=center,font=\footnotesize,text=white] at ($(current page.south)$) {\faLinkedinSquare \ https://www.linkedin.com/in/ryushane \qquad \faGithub \ https://github.com/ryushane \qquad \faRssSquare \ https://ryushane.com};
+% \end{tikzpicture}%
+
+\end{document}

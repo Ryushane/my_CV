@@ -1,0 +1,91 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+% \usepackage{NotoSansSC_external}
+% \usepackage{NotoSerifCJKsc_external}
+% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+
+\usepackage{xcolor}
+\definecolor{CVBlue}{RGB}{23,110,191}
+% \usepackage[backend=bibtex]{biblatex}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+
+\begin{document}
+\pagenumbering{gobble} % suppress 
+
+%%%% 利用tikz来定位照片，部分招聘单位可能需要“以貌取人”
+\begin{tikzpicture}[remember picture, overlay] 
+  \node[anchor = north east] at ($(current page.north east)+(-2cm,-2cm)$) {\includegraphics[height=3cm]{avatar}};
+\end{tikzpicture}%
+
+%%%% 利用tikz来定位页脚栏，电子版简历使用，黑白纸质打印效果可能并不好。这里只在第一页显示，如果需要每页都有，页脚或者background中加入。
+\begin{tikzpicture}[remember picture, overlay] 
+  \node[anchor = south,fill=CVBlue,draw=none,minimum width=\paperwidth,minimum height=1.5em,align=center,font=\footnotesize,text=white] at ($(current page.south)$) {\faLinkedinSquare \ https://www.linkedin.com/in/ryushane \qquad \faGithub \ https://github.com/Ryushane \qquad \faRssSquare \ https://ryushane.com};
+\end{tikzpicture}%
+
+\name{Ryushane}
+
+\basicInfo{
+  \email{ryushane.net@gmail.com} \textperiodcentered\ 
+  \phone{114-514-1919810} 
+}
+
+\section{\faGraduationCap\  Education Background}
+\datedsubsection{\textbf{BeiHang University (BUAA)}}{2020/09 -- 2023/06}
+{\par \textit{Master}\ of Information and Communication Engineering \par}%
+% \textit{Master} \hfill Information and Communication Engineering Dept
+\begin{itemize}
+  \item Research Topics: Optimization and acceleration of Convolutional neural network on FPGA
+  \item \textit{\nth{1} Prize} of freshman merit scholarship
+  \item Merit Student of BUAA
+\end{itemize}
+\datedsubsection{\textbf{BeiHang University (BUAA)}}{2016/09 -- 2020/06}
+{\par \textit{Bachelor}\ of Electronics and Information Engineering \par}%
+\begin{itemize}
+  \item \textit{GPA}: 3.78/4.00, \textit{Ranking}: Top 5\%
+  \item Beijing Outstanding Graduate(Top \%5), \textit{\nth{1} Prize} on NUEDC, \textit{\nth{1} Prize} on CUMCM
+\end{itemize}
+
+\section{\faUsers\ Experience}
+\datedsubsection{\textbf{ASIC Design and Verification in NVIDIA}}{2022/05 -- 2023/01}
+\begin{itemize}
+  \item Purpose: Get a intership experience and hope to convert.
+  \item Result: Develope a tools which is gorgeous for ASIC team and improve our development efficiency.
+\end{itemize}
+
+\datedsubsection{\textbf{xx-based Network}}{2021/10 -- 2022/11}
+\begin{itemize}
+  \item Purpose: I need to get a master degree.
+  \item Method: Data collection, using xx method.
+  \item Result: Achieving a 114514x speedup compared to Raspberry Pi 3b.
+\end{itemize}
+
+\datedsubsection{\textbf{Wireless transceiver system for two-way voice simultaneous transmission}}{2020/07 -- 2021/04}
+\begin{itemize}
+  \item Purpose: Get some comprehensive quantification for postgraduate recommendation.
+  \item Method: Ride the dalao's coattails.
+  \item Result: The signal is very good, came to BUPT for comprehensive test. Both preliminary examination and comprehensive test scores are highest. But we did not advance to the national competition. As a polytechnic man I think it's really cool and fits my fantasy about NUEDC.
+\end{itemize}
+
+\section{\faCogs\ Skills}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item Proficient in using Verilog for FPGA development, familiar with the Vivado development environment.
+  \item Proficient in Python / C programming, familiar with Tcl scripting and Linux development environment.
+  \item CET-6
+\end{itemize}
+
+\section{\faInfo\ Campus Activities}
+\begin{itemize}[parsep=0.5ex]
+  \item Vice President of the Classical Department, publishes the magazine "Ice Tang" at the Cultural Festival, helps the 2-F class to deduce the ending of the movie, participates in the riddle-guessing and cooking competitions at the Cultural Festival, and participates in the New Year's Day worship and the Hatchling Festival outside of school.
+\end{itemize}
+
+
+\end{document}
