@@ -12,7 +12,9 @@
 
 ## 预览
 
+![resume-zh_CN](https://user-images.githubusercontent.com/48601190/220899907-35daa00b-51b6-4c1d-8039-117ee01a8ac9.jpg)
 
+![resume](https://user-images.githubusercontent.com/48601190/220899913-bdb54fa6-8d0f-45dd-8802-e23f7a0e5350.jpg)
 
 ## 使用方法
 
