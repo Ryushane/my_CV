@@ -35,7 +35,8 @@ xelatex resume-en&zh_CN.tex % 编译中英文简历
 
 页脚部分使用了tikz定位，需要编译两次才能排布到正确位置。
 
-
+### Font Awesome的使用方法
+首先在 Font Awesome Icons 上选中自己想使用的图标，然后在 fontawesomesymbols-generic.tex 中找到相应的宏, 将其作为普通文本一样使用。 如果不需要使用 FontAwesome 字体的把那些宏去掉即可。 其他的可以自行参考相应 cls 和 tex 文件。(这段直接从billryan的文档偷过来了)
 
 ## License
 
