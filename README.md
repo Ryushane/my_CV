@@ -27,6 +27,8 @@ xelatex resume-en&zh_CN.tex % 编译中英文简历
 \end{tikzpicture}%
 ```
 
+页脚部分使用了tikz定位，需要编译两次才能排布到正确位置。
+
 ## License
 
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)
