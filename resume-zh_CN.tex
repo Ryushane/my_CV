@@ -1,4 +1,3 @@
-% !TEX TS-program = xelatex
 % !TEX encoding = UTF-8 Unicode
 % !Mode:: "TeX:UTF-8"
 
@@ -8,10 +7,19 @@
 % \usepackage{NotoSerifCJKsc_external}
 % \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
+% \usepackage{hyperref} % 超链接
+% \hypersetup{
+% 	colorlinks=true,
+% 	linkcolor=cyan,
+% 	filecolor=blue,      
+% 	urlcolor=white,
+% 	citecolor=green,
+% }
+% \urlstyle{tt}
 
 \usepackage{xcolor}
 \definecolor{CVBlue}{RGB}{23,110,191}
-\usepackage[backend=bibtex]{biblatex}
+\usepackage[backend=biber]{biblatex}
 
 \usepackage{tikz}
 \usetikzlibrary{calc}
@@ -30,7 +38,7 @@
 
 %%%% 利用tikz来定位页脚栏，电子版简历使用，黑白纸质打印效果可能并不好。这里只在第一页显示，如果需要每页都有，页脚或者background中加入。
 \begin{tikzpicture}[remember picture, overlay] 
-  \node[anchor = south,fill=CVBlue,draw=none,minimum width=\paperwidth,minimum height=1.5em,align=center,font=\footnotesize,text=white] at ($(current page.south)$) {\faLinkedinSquare \ https://www.linkedin.com/in/ryushane \qquad \faGithub \ https://github.com/ryushane \qquad \faRssSquare \ https://ryushane.com};
+  \node[anchor = south,fill=CVBlue,draw=none,minimum width=\paperwidth,minimum height=1.5em,align=center,font=\footnotesize,text=white] at ($(current page.south)$) {\linkedin{https://www.linkedin.com/in/ryushane} \qquad \github{https://github.com/ryushane} \qquad \homepage{https://ryushane.com}};
 \end{tikzpicture}%
 
 \name{刘某某}
@@ -42,7 +50,7 @@
 
 
 
-\section{\faGraduationCap\  教育背景}
+\section{\texorpdfstring{\faGraduationCap}{} 教育背景}  % texorpdfstring是为了消除token not allowed in a PDF string的警报，在section中想插入特殊符号需要
 \datedsubsection{\textbf{知春路航空职业学院}}{2020/09 -- 2023/06}
 \textit{硕士研究生} \quad \textit{电子信息工程学院} \quad  \textit{信息与通信工程}
 \begin{itemize}
@@ -59,7 +67,7 @@
 
 
 
-\section{\faUsers\ 实习/项目经历}
+\section{\texorpdfstring{\faUsers}{} 实习/项目经历}
 
 \datedsubsection{\textbf{给老黄设计芯片}}{2022/05 -- 2023/01}
 \begin{itemize}
@@ -83,7 +91,7 @@
 
 % \clearpage % 换页
 
-\section{\faCogs\ 其他说明}
+\section{\texorpdfstring{\faCogs}{} 其他说明}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
   \item 编程能力: 
@@ -100,13 +108,13 @@
 
 
 
-\section{\faInfo\ 学生工作}
+\section{\texorpdfstring{\faInfo}{} 学生工作}
 \begin{itemize}[parsep=0.5ex]
   \item 古典部副部长，于文化祭出版社刊《冰菓》，帮助2-F班推理电影结局，在文化祭中参加猜谜、料理等比赛，在校外参与新年参拜、生雏祭等活动。
 
 \end{itemize}
 
-\section{\faFile\ 获奖情况}
+\section{\texorpdfstring{\faFile}{} 获奖情况}
 \datedline{校级三好学生}{2021/10}
 \datedline{北京市优秀毕业生}{2020/06}
 \datedline{全国大学生电子设计竞赛一等奖}{2019/09}

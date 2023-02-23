@@ -11,7 +11,7 @@
 
 \usepackage{xcolor}
 \definecolor{CVBlue}{RGB}{23,110,191}
-% \usepackage[backend=bibtex]{biblatex}
+\usepackage[backend=biber]{biblatex}
 
 \usepackage{tikz}
 \usetikzlibrary{calc}
@@ -27,7 +27,7 @@
 
 %%%% 利用tikz来定位页脚栏，电子版简历使用，黑白纸质打印效果可能并不好。这里只在第一页显示，如果需要每页都有，页脚或者background中加入。
 \begin{tikzpicture}[remember picture, overlay] 
-  \node[anchor = south,fill=CVBlue,draw=none,minimum width=\paperwidth,minimum height=1.5em,align=center,font=\footnotesize,text=white] at ($(current page.south)$) {\faLinkedinSquare \ https://www.linkedin.com/in/ryushane \qquad \faGithub \ https://github.com/Ryushane \qquad \faRssSquare \ https://ryushane.com};
+  \node[anchor = south,fill=CVBlue,draw=none,minimum width=\paperwidth,minimum height=1.5em,align=center,font=\footnotesize,text=white] at ($(current page.south)$) {\linkedin{https://www.linkedin.com/in/ryushane} \qquad \github{https://github.com/ryushane} \qquad \homepage{https://ryushane.com}};
 \end{tikzpicture}%
 
 \name{Ryushane}
@@ -37,7 +37,7 @@
   \phone{114-514-1919810} 
 }
 
-\section{\faGraduationCap\  Education Background}
+\section{\texorpdfstring{\faGraduationCap}{}  Education Background}
 \datedsubsection{\textbf{BeiHang University (BUAA)}}{2020/09 -- 2023/06}
 {\par \textit{Master}\ of Information and Communication Engineering \par}%
 % \textit{Master} \hfill Information and Communication Engineering Dept
@@ -53,7 +53,7 @@
   \item Beijing Outstanding Graduate(Top \%5), \textit{\nth{1} Prize} on NUEDC, \textit{\nth{1} Prize} on CUMCM
 \end{itemize}
 
-\section{\faUsers\ Experience}
+\section{\texorpdfstring{\faUsers}{} Experience}
 \datedsubsection{\textbf{ASIC Design and Verification in NVIDIA}}{2022/05 -- 2023/01}
 \begin{itemize}
   \item Purpose: Get a intership experience and hope to convert.
@@ -74,7 +74,7 @@
   \item Result: The signal is very good, came to BUPT for comprehensive test. Both preliminary examination and comprehensive test scores are highest. But we did not advance to the national competition. As a polytechnic man I think it's really cool and fits my fantasy about NUEDC.
 \end{itemize}
 
-\section{\faCogs\ Skills}
+\section{\texorpdfstring{\faCogs}{} Skills}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
   \item Proficient in using Verilog for FPGA development, familiar with the Vivado development environment.
@@ -82,7 +82,7 @@
   \item CET-6
 \end{itemize}
 
-\section{\faInfo\ Campus Activities}
+\section{\texorpdfstring{\faInfo}{} Campus Activities}
 \begin{itemize}[parsep=0.5ex]
   \item Vice President of the Classical Department, publishes the magazine "Ice Tang" at the Cultural Festival, helps the 2-F class to deduce the ending of the movie, participates in the riddle-guessing and cooking competitions at the Cultural Festival, and participates in the New Year's Day worship and the Hatchling Festival outside of school.
 \end{itemize}
